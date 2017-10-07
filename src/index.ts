@@ -1,5 +1,5 @@
-function component() {
-   var element = document.createElement('div');
+function component(): HTMLElement {
+   var element: HTMLElement = document.createElement('div');
 
    element.innerHTML = "Hello world!!!";
 
