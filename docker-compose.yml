@@ -3,6 +3,8 @@ services:
   front:
     build:
       context: ./docker
+    environment:
+      LOCAL_USER_ID: $UID
     volumes:
       - ".:/project"
       - "~/.ssh:/root/.ssh"
