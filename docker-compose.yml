@@ -7,6 +7,6 @@ services:
       LOCAL_USER_ID: $UID
     volumes:
       - ".:/project"
-      - "~/.ssh:/root/.ssh"
+      - "~/.ssh:/.host_ssh"
     stdin_open: true
     tty: true
