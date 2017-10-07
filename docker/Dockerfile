@@ -16,13 +16,6 @@ RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364
     rm /usr/local/bin/gosu.asc && \
     chmod +x /usr/local/bin/gosu
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-    apt-get update && \
-    apt-get install yarn && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 WORKDIR /project
