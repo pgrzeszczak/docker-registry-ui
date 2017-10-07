@@ -8,6 +8,7 @@ useradd --shell /bin/bash -u $USER_ID -o -c "" -m user
 echo "alias ll=\"ls -al\"" >> /home/user/.bashrc
 su - user -c "git config --global push.default simple"
 ln -s /.host_ssh /home/user/.ssh
+ln -s /.bash_history /home/user/.bash_history
 
 export HOME=/home/user
 

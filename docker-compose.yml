@@ -8,5 +8,6 @@ services:
     volumes:
       - ".:/project"
       - "~/.ssh:/.host_ssh"
+      - ".bash_history:/.bash_history"
     stdin_open: true
     tty: true
