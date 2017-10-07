@@ -12,12 +12,8 @@ module.exports = {
       title: 'Docker Registry UI'
     })
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
   output: {
-    filename: '[name].[hash].bundle.js',
+    filename: '[name].[chunkhash].bundle.js',
     path: path.resolve(__dirname, 'dist')
   }
 };

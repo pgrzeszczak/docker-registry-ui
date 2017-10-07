@@ -7,12 +7,15 @@
   "author": "Przemysław Grzeszczak <przemyslaw.grzeszczak@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.config.js"
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
     "html-webpack-plugin": "^2.30.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
   }
 }
