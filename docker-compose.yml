@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  front:
+    build:
+      context: ./docker
+    volumes:
+      - ".:/project"
+      - "~/.ssh:/root/.ssh"
+    stdin_open: true
+    tty: true
