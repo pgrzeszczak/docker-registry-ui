@@ -5,7 +5,7 @@ LABEL maintainer="Przemysław Grzeszczak <przemyslaw.grzeszczak@gmail.com>"
 RUN userdel -r node
 
 RUN apt-get update && \
-    apt-get install apt-transport-https nano && \
+    apt-get install apt-transport-https nano less && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
