@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:pgrzeszczak/docker-registry-ui.git",
   "author": "Przemysław Grzeszczak <przemyslaw.grzeszczak@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
 }
