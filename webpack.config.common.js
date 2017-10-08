@@ -30,7 +30,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Docker Registry UI',
       template: path.resolve(__dirname, "src/index.html"),
-      inject: true
+      inject: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      }
     }),
     new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
