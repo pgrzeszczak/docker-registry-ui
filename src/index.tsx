@@ -1,9 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
+import 'typeface-roboto';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import { App } from './components/app/app.component';
 
 ReactDOM.render(
-  <App />,
+  <MuiThemeProvider>
+    <App />
+  </MuiThemeProvider>,
   document.getElementById('root')
 );

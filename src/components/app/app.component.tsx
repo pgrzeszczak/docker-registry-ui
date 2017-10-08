@@ -1,7 +1,12 @@
 import * as React from 'react';
+import AppBar from 'material-ui/AppBar';
 
 export class App extends React.Component {
   render() {
-    return <h1>Hello, World!</h1>;
+    return (
+      <AppBar
+        title="Docker Registry UI"
+      />
+    );
   }
 }

@@ -11,7 +11,8 @@ module.exports = {
     main: './src/index.tsx',
     vendor: [
       'react',
-      'react-dom'
+      'react-dom',
+      'material-ui'
     ]
   },
   resolve: {
@@ -22,6 +23,22 @@ module.exports = {
       test: /\.tsx?$/,
       loader: 'awesome-typescript-loader',
       include: path.resolve(__dirname, "src"),
+    }, {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
+    }, {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: [
+        'file-loader'
+      ]
+    }, {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: [
+        'file-loader'
+      ]
     }]
   },
   plugins: [
