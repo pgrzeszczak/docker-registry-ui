@@ -26,18 +26,19 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new CheckerPlugin(),
     new HtmlWebpackPlugin({
       title: 'Docker Registry UI',
       template: path.resolve(__dirname, "src/index.html"),
       inject: true
     }),
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
-    }),
-    new CheckerPlugin()
+    })
   ],
   output: {
     filename: '[name].bundle.js',
