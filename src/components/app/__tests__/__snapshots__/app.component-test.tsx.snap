@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should be rendered 1`] = `
+<AppBar
+  showMenuIconButton={true}
+  title="Docker Registry UI"
+  zDepth={1}
+/>
+`;
