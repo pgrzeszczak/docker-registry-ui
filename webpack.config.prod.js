@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const common = require('./webpack.config.common.js');
 
-module.exports = merge(common, {
+module.exports = merge(common.config, {
   plugins: [
     new UglifyJSPlugin(),
     new webpack.DefinePlugin({
@@ -12,6 +12,9 @@ module.exports = merge(common, {
       }
     })
   ],
+  module: {
+    loaders: common.createLoaders('[name].[hash].[ext]', '[name].[hash].[ext]')
+  },
   output: {
     filename: '[name].[chunkhash].bundle.js'
   }
