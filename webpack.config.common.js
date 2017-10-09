@@ -1,9 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const {
-  CheckerPlugin
-} = require('awesome-typescript-loader');
 const webpack = require('webpack');
 
 module.exports = {
@@ -21,7 +18,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.tsx?$/,
-      loader: 'awesome-typescript-loader',
+      loader: 'ts-loader',
       include: path.resolve(__dirname, "src"),
     }, {
       test: /\.css$/,
@@ -43,7 +40,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new CheckerPlugin(),
     new HtmlWebpackPlugin({
       title: 'Docker Registry UI',
       template: path.resolve(__dirname, "src/index.html"),
