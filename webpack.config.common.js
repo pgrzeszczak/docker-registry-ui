@@ -3,13 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
-
-
 module.exports = {
   createLoaders: function(assetsName, fontsName) {
     return [{
       test: /\.tsx?$/,
-      loader: 'ts-loader',
+      use: ['react-hot-loader/webpack', 'ts-loader'],
       include: path.resolve(__dirname, "src"),
     }, {
       test: /\.css$/,
@@ -39,6 +37,7 @@ module.exports = {
   },
   config: {
     entry: {
+      hmr: 'react-hot-loader/patch',
       main: './src/index.tsx',
       vendor: [
         'react',

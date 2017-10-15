@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.config.common.js');
+const webpack = require('webpack');
 
 const loaders = common.createLoaders('[name].[ext]', '[name].[ext]');
 
@@ -17,8 +18,12 @@ loaders.push({
 module.exports = merge(common.config, {
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders: loaders
   },
