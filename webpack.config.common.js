@@ -43,7 +43,8 @@ module.exports = {
       vendor: [
         'react',
         'react-dom',
-        'material-ui'
+        'material-ui',
+        'typeface-roboto'
       ]
     },
     resolve: {
