@@ -3,7 +3,7 @@ FROM ubuntu:zesty
 LABEL maintainer="Przemysław Grzeszczak <przemyslaw.grzeszczak@gmail.com>"
 
 RUN apt-get update && \
-    apt-get install -y apt-transport-https nano less curl git dirmngr lsb-release && \
+    apt-get install -y apt-transport-https nano less curl git dirmngr lsb-release sudo && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
